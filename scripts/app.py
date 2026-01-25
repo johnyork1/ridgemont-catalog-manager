@@ -8,11 +8,11 @@ manager = CatalogManager()
 # Page Config
 st.set_page_config(page_title="Ridgemont Studio", page_icon="🎵", layout="wide")
 # Logo and Title
-col_logo, col_title = st.columns([1, 5])
+col_logo, col_title = st.columns([0.5, 5])
 with col_logo:
     st.image(str(Path(__file__).parent.parent / "logo.jpeg"), width=80)
 with col_title:
-    st.title("Ridgemont Studio Manager")
+    st.markdown("<h1 style='margin-top: 10px;'>Ridgemont Studio Manager</h1>", unsafe_allow_html=True)
 # Sidebar Navigation
 page = st.sidebar.radio("Go to", ["Dashboard", "All Songs", "Add Song", "Financials", "Pitching"])
 
