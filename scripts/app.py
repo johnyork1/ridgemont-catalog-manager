@@ -7,8 +7,12 @@ from pathlib import Path
 manager = CatalogManager()
 # Page Config
 st.set_page_config(page_title="Ridgemont Studio", page_icon="🎵", layout="wide")
-# Title & Stats
-st.title("🎵 Ridgemont Studio Manager")
+# Logo and Title
+col_logo, col_title = st.columns([1, 5])
+with col_logo:
+    st.image(str(Path(__file__).parent.parent / "logo.jpeg"), width=80)
+with col_title:
+    st.title("Ridgemont Studio Manager")
 # Sidebar Navigation
 page = st.sidebar.radio("Go to", ["Dashboard", "All Songs", "Add Song", "Financials", "Pitching"])
 
