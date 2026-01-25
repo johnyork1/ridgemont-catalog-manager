@@ -298,8 +298,8 @@ class CatalogManager:
                 return candidate
 
         return None  # Should never happen
-    def add_song(self, title: str, act_id: str, status: str = "idea", legacy_code: str = None, is_cover: bool = False, cover_of: str = None, artist: str = None):
-        """Add a new song. Auto-generates unique 4-letter code and Song ID for all songs."""
+    def add_song(self, title: str, act_id: str, status: str = "idea", legacy_code: str = None, is_cover: bool = False, cover_of: str = None, artist: str = None, deployments: dict = None):
+        """Add a new song with deployment tracking. Auto-generates unique 4-letter code and Song ID."""
         # For cover songs, use the same code as the original song
         if is_cover and cover_of:
             original_song = self.find_song_by_title(cover_of)
@@ -342,6 +342,11 @@ class CatalogManager:
             "writers": writers,
             "status": status,
             "legacy_code": legacy_code or "",
+            "deployments": deployments or {
+                "distribution": [],      # e.g., DistroKid, TuneCore, CD Baby
+                "sync_libraries": [],    # e.g., Songtradr, Music Gateway, Pond5
+                "streaming": []          # e.g., Spotify, Apple Music, Amazon
+            },
             "revenue": {"expenses": [], "total_earned": 0},
             "dates": {"created": datetime.now().strftime("%Y-%m-%d")}
         }
@@ -352,6 +357,16 @@ class CatalogManager:
         self.catalog["songs"].append(song)
         self.save_data()
         return song
+    def update_song(self, song_id: str, updates: dict) -> bool:
+        """Updates an existing song's details."""
+        for song in self.catalog['songs']:
+            if song['song_id'] == song_id:
+                song.update(updates)
+                song['dates']['last_modified'] = datetime.now().isoformat()
+                self.save_data()
+                return True
+        return False
+
     def add_expense_shortcode(self, title: str, amount: float, category: str) -> str:
         song = self.find_song_by_title(title)
         if not song: return "Song not found."

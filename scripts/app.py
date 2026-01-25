@@ -14,7 +14,7 @@ with col_logo:
 with col_title:
     st.markdown("<h1 style='margin-top: 10px;'>Ridgemont Studio Manager</h1>", unsafe_allow_html=True)
 # Sidebar Navigation
-page = st.sidebar.radio("Go to", ["Dashboard", "All Songs", "Add Song", "Financials", "Pitching"])
+page = st.sidebar.radio("Go to", ["Dashboard", "All Songs", "Add Song", "Edit Song", "Financials", "Pitching"])
 
 if page == "Dashboard":
     st.header("Catalog Overview")
@@ -32,10 +32,20 @@ if page == "Dashboard":
     st.subheader("Recent Songs")
     songs = manager.catalog['songs'][-10:]  # Show last 10
     if songs:
-        df = pd.DataFrame(songs)
-        cols = ['title', 'act_id', 'status', 'legacy_code']
-        display_df = df[[c for c in cols if c in df.columns]]
-        st.dataframe(display_df, use_container_width=True)
+        # Flatten data for display with deployment info
+        table_data = []
+        for s in songs:
+            deps = s.get('deployments', {})
+            dist = ", ".join(deps.get('distribution', [])) or "-"
+            sync = ", ".join(deps.get('sync_libraries', [])) or "-"
+            table_data.append({
+                "Title": s['title'],
+                "Artist": s.get('artist', '-'),
+                "Status": s['status'],
+                "Distributor": dist,
+                "Sync Libraries": sync
+            })
+        st.dataframe(pd.DataFrame(table_data), use_container_width=True)
 
 elif page == "All Songs":
     st.header("📀 Complete Catalog")
@@ -152,6 +162,13 @@ elif page == "Add Song":
         is_cover = st.checkbox("This is a cover song")
         cover_of = st.selectbox("Song Covered", ["(Select original song)"] + existing_songs, help="Select the original song being covered")
 
+        # Deployment Strategy
+        st.markdown("---")
+        st.subheader("🚀 Deployment Strategy")
+        dists = st.multiselect("Distribution", ["DistroKid", "TuneCore", "CD Baby", "Amuse"])
+        syncs = st.multiselect("Sync Libraries", ["Songtradr", "Music Gateway", "Pond5", "Disco", "Taxi"])
+        streams = st.multiselect("Live On", ["Spotify", "Apple Music", "Amazon", "YouTube", "Tidal"])
+
         submitted = st.form_submit_button("Create Song")
 
         if submitted:
@@ -162,13 +179,19 @@ elif page == "Add Song":
             elif is_cover and (not cover_of or cover_of == "(Select original song)"):
                 st.error("❌ Please select the song being covered")
             else:
+                deployments = {
+                    "distribution": dists,
+                    "sync_libraries": syncs,
+                    "streaming": streams
+                }
                 result = manager.add_song(
                     title,
                     publisher_id,
                     status=status,
                     is_cover=is_cover,
                     cover_of=cover_of if (is_cover and cover_of and cover_of != "(Select original song)") else None,
-                    artist=artist
+                    artist=artist,
+                    deployments=deployments
                 )
                 if isinstance(result, str) and result.startswith("❌"):
                     st.error(result)
@@ -178,6 +201,66 @@ elif page == "Add Song":
                     else:
                         code_msg = f" (Code: {result.get('legacy_code', '')})" if isinstance(result, dict) else ""
                         st.success(f"✅ Added '{title}' by {artist} ({publisher_label}){code_msg}")
+
+elif page == "Edit Song":
+    st.header("✏️ Edit Song Details")
+
+    if not manager.catalog['songs']:
+        st.warning("No songs in catalog.")
+    else:
+        # Select song to edit
+        titles = {s['title']: s['song_id'] for s in manager.catalog['songs']}
+        selected_title = st.selectbox("Select Song to Edit", list(titles.keys()))
+        song_id = titles[selected_title]
+
+        # Get current data
+        current_song = next(s for s in manager.catalog['songs'] if s['song_id'] == song_id)
+        current_deps = current_song.get('deployments', {"distribution": [], "sync_libraries": [], "streaming": []})
+
+        # Show current info
+        st.markdown(f"**Song ID:** {song_id} | **Code:** {current_song.get('legacy_code', 'N/A')} | **Artist:** {current_song.get('artist', 'Unknown')}")
+
+        with st.form("edit_song_form"):
+            new_status = st.selectbox(
+                "Current Status",
+                ["idea", "demo", "mixing", "mastered", "copyright", "released"],
+                index=["idea", "demo", "mixing", "mastered", "copyright", "released"].index(current_song.get('status', 'idea'))
+            )
+
+            st.markdown("---")
+            st.subheader("🚀 Update Deployments")
+
+            # Pre-fill existing values
+            dists = st.multiselect(
+                "Distribution",
+                ["DistroKid", "TuneCore", "CD Baby", "Amuse"],
+                default=[d for d in current_deps.get('distribution', []) if d in ["DistroKid", "TuneCore", "CD Baby", "Amuse"]]
+            )
+            syncs = st.multiselect(
+                "Sync Libraries",
+                ["Songtradr", "Music Gateway", "Pond5", "Disco", "Taxi"],
+                default=[s for s in current_deps.get('sync_libraries', []) if s in ["Songtradr", "Music Gateway", "Pond5", "Disco", "Taxi"]]
+            )
+            streams = st.multiselect(
+                "Live On",
+                ["Spotify", "Apple Music", "Amazon", "YouTube", "Tidal"],
+                default=[s for s in current_deps.get('streaming', []) if s in ["Spotify", "Apple Music", "Amazon", "YouTube", "Tidal"]]
+            )
+
+            save_changes = st.form_submit_button("Save Changes")
+
+            if save_changes:
+                updates = {
+                    "status": new_status,
+                    "deployments": {
+                        "distribution": dists,
+                        "sync_libraries": syncs,
+                        "streaming": streams
+                    }
+                }
+                manager.update_song(song_id, updates)
+                st.success(f"✅ Updated '{selected_title}' successfully!")
+                st.rerun()
 
 elif page == "Financials":
     st.header("💰 CFO Module")
