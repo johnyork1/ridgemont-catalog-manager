@@ -235,7 +235,14 @@ class CatalogManager:
         return user_path.as_uri()
     def get_catalog_summary(self) -> Dict:
         songs = self.catalog.get("songs", [])
-        return {"total_songs": len(songs), "by_act": {}, "by_status": {}}
+        by_act = {}
+        by_status = {}
+        for s in songs:
+            act = s.get('act_id', 'Unknown')
+            status = s.get('status', 'unknown')
+            by_act[act] = by_act.get(act, 0) + 1
+            by_status[status] = by_status.get(status, 0) + 1
+        return {"total_songs": len(songs), "by_act": by_act, "by_status": by_status}
     def get_revenue_summary(self) -> Dict:
         total = sum(s.get("revenue", {}).get("total_earned", 0) for s in self.catalog.get("songs", []))
         return {"total_revenue": total, "sync_income": 0, "top_earners": []}
@@ -358,11 +365,29 @@ class CatalogManager:
         self.save_data()
         return song
     def update_song(self, song_id: str, updates: dict) -> bool:
-        """Updates an existing song's details."""
+        """Updates an existing song's details (status, deployments, ISRC, ISWC, etc.)."""
         for song in self.catalog['songs']:
             if song['song_id'] == song_id:
+                # Handle nested updates for registration info (ISRC, ISWC, etc.)
+                if 'registration' in updates:
+                    if 'registration' not in song:
+                        song['registration'] = {}
+                    song['registration'].update(updates.pop('registration'))
+
+                # Handle nested updates for deployments
+                if 'deployments' in updates:
+                    if 'deployments' not in song:
+                        song['deployments'] = {"distribution": [], "sync_libraries": [], "streaming": []}
+                    song['deployments'].update(updates.pop('deployments'))
+
+                # Apply remaining updates
                 song.update(updates)
+
+                # Update timestamp
+                if 'dates' not in song:
+                    song['dates'] = {}
                 song['dates']['last_modified'] = datetime.now().isoformat()
+
                 self.save_data()
                 return True
         return False

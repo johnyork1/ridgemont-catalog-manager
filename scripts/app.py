@@ -13,8 +13,18 @@ with col_logo:
     st.image(str(Path(__file__).parent.parent / "logo.jpeg"), width=80)
 with col_title:
     st.markdown("<h1 style='margin-top: 10px;'>Ridgemont Studio Manager</h1>", unsafe_allow_html=True)
-# Sidebar Navigation
-page = st.sidebar.radio("Go to", ["Dashboard", "All Songs", "Add Song", "Edit Song", "Financials", "Pitching"])
+# Sidebar Navigation (with key for programmatic control)
+# Initialize nav_page in session state if not set
+if 'nav_page' not in st.session_state:
+    st.session_state.nav_page = "Dashboard"
+
+# Get the list of pages
+NAV_PAGES = ["Dashboard", "All Songs", "Add Song", "Edit Song", "View Deployments", "Financials", "Pitching"]
+
+# Find index of current page
+nav_index = NAV_PAGES.index(st.session_state.nav_page) if st.session_state.nav_page in NAV_PAGES else 0
+
+page = st.sidebar.radio("Go to", NAV_PAGES, index=nav_index, key="nav_page")
 
 if page == "Dashboard":
     st.header("Catalog Overview")
@@ -23,12 +33,21 @@ if page == "Dashboard":
     summary = manager.get_catalog_summary()
     revenue = manager.get_revenue_summary()
 
+    # Top row metrics
     col1, col2, col3 = st.columns(3)
     col1.metric("Total Songs", summary['total_songs'])
     col2.metric("Total Revenue", f"${revenue['total_revenue']:,.2f}")
     act_name = max(summary['by_act'], key=summary['by_act'].get) if summary['by_act'] else "N/A"
-    col3.metric("Top Act", act_name)
+    col3.metric("Top Act", act_name.replace('_', ' ').title() if act_name != "N/A" else "N/A")
 
+    # Songs by Publisher
+    st.subheader("Songs by Publisher")
+    pub_col1, pub_col2, pub_col3 = st.columns(3)
+    pub_col1.metric("❄️ Frozen Cloud", summary['by_act'].get('FROZEN_CLOUD', 0))
+    pub_col2.metric("🏛️ Park Bellevue", summary['by_act'].get('PARK_BELLEVUE', 0))
+    pub_col3.metric("☀️ Bajan Sun", summary['by_act'].get('BAJAN_SUN', 0))
+
+    st.markdown("---")
     st.subheader("Recent Songs")
     songs = manager.catalog['songs'][-10:]  # Show last 10
     if songs:
@@ -36,14 +55,17 @@ if page == "Dashboard":
         table_data = []
         for s in songs:
             deps = s.get('deployments', {})
+            reg = s.get('registration', {})
             dist = ", ".join(deps.get('distribution', [])) or "-"
             sync = ", ".join(deps.get('sync_libraries', [])) or "-"
+            isrc = reg.get('isrc', '-') or '-'
             table_data.append({
                 "Title": s['title'],
                 "Artist": s.get('artist', '-'),
+                "Publisher": s.get('act_id', '-').replace('_', ' ').title(),
                 "Status": s['status'],
-                "Distributor": dist,
-                "Sync Libraries": sync
+                "ISRC": isrc,
+                "Distributor": dist
             })
         st.dataframe(pd.DataFrame(table_data), use_container_width=True)
 
@@ -202,65 +224,309 @@ elif page == "Add Song":
                         code_msg = f" (Code: {result.get('legacy_code', '')})" if isinstance(result, dict) else ""
                         st.success(f"✅ Added '{title}' by {artist} ({publisher_label}){code_msg}")
 
+# --- IMPROVED EDIT SONG TAB ---
 elif page == "Edit Song":
-    st.header("✏️ Edit Song Details")
+    st.header("Update Song Details")
 
     if not manager.catalog['songs']:
         st.warning("No songs in catalog.")
     else:
-        # Select song to edit
-        titles = {s['title']: s['song_id'] for s in manager.catalog['songs']}
-        selected_title = st.selectbox("Select Song to Edit", list(titles.keys()))
-        song_id = titles[selected_title]
+        # 1. Smart Selector with disambiguation for duplicates/covers
+        # Build display labels: "Title | Artist (Act)" to distinguish covers
+        song_options = {}
+        for s in manager.catalog['songs']:
+            act_name = s.get('act_id', 'Unknown').replace('_', ' ').title()
+            artist = s.get('artist', act_name)
+            # Create unique display label
+            display_label = f"{s['title']} | {artist}"
+            # Handle duplicates by adding song_id suffix if needed
+            if display_label in song_options:
+                display_label = f"{s['title']} | {artist} ({s['song_id']})"
+            song_options[display_label] = s['song_id']
 
-        # Get current data
-        current_song = next(s for s in manager.catalog['songs'] if s['song_id'] == song_id)
-        current_deps = current_song.get('deployments', {"distribution": [], "sync_libraries": [], "streaming": []})
+        # Sort options alphabetically by title
+        sorted_options = sorted(song_options.keys())
 
-        # Show current info
-        st.markdown(f"**Song ID:** {song_id} | **Code:** {current_song.get('legacy_code', 'N/A')} | **Artist:** {current_song.get('artist', 'Unknown')}")
+        # Initialize session state for last selection
+        if 'last_selected_song_id' not in st.session_state:
+            st.session_state.last_selected_song_id = None
 
-        with st.form("edit_song_form"):
-            new_status = st.selectbox(
-                "Current Status",
-                ["idea", "demo", "mixing", "mastered", "copyright", "released"],
-                index=["idea", "demo", "mixing", "mastered", "copyright", "released"].index(current_song.get('status', 'idea'))
-            )
+        def update_selection():
+            if st.session_state.song_selector:
+                st.session_state.last_selected_song_id = song_options.get(st.session_state.song_selector)
 
-            st.markdown("---")
-            st.subheader("🚀 Update Deployments")
+        # Find default index if we have a previous selection
+        default_index = None
+        if st.session_state.last_selected_song_id:
+            for i, label in enumerate(sorted_options):
+                if song_options[label] == st.session_state.last_selected_song_id:
+                    default_index = i
+                    break
 
-            # Pre-fill existing values
-            dists = st.multiselect(
-                "Distribution",
-                ["DistroKid", "TuneCore", "CD Baby", "Amuse"],
-                default=[d for d in current_deps.get('distribution', []) if d in ["DistroKid", "TuneCore", "CD Baby", "Amuse"]]
-            )
-            syncs = st.multiselect(
-                "Sync Libraries",
-                ["Songtradr", "Music Gateway", "Pond5", "Disco", "Taxi"],
-                default=[s for s in current_deps.get('sync_libraries', []) if s in ["Songtradr", "Music Gateway", "Pond5", "Disco", "Taxi"]]
-            )
-            streams = st.multiselect(
-                "Live On",
-                ["Spotify", "Apple Music", "Amazon", "YouTube", "Tidal"],
-                default=[s for s in current_deps.get('streaming', []) if s in ["Spotify", "Apple Music", "Amazon", "YouTube", "Tidal"]]
-            )
+        selected_label = st.selectbox(
+            "Select Song to Edit",
+            sorted_options,
+            index=default_index,
+            placeholder="Type to search...",
+            key="song_selector",
+            on_change=update_selection
+        )
 
-            save_changes = st.form_submit_button("Save Changes")
+        # Get current data fresh from the manager using song_id
+        selected_song = None
+        if selected_label:
+            song_id = song_options[selected_label]
+            selected_song = next((s for s in manager.catalog['songs'] if s['song_id'] == song_id), None)
 
-            if save_changes:
-                updates = {
-                    "status": new_status,
-                    "deployments": {
-                        "distribution": dists,
-                        "sync_libraries": syncs,
-                        "streaming": streams
+        if selected_song:
+            song_id = selected_song['song_id']
+            current_deps = selected_song.get('deployments', {})
+            current_reg = selected_song.get('registration', {})
+
+            # 2. The Edit Form
+            with st.form("edit_song_form"):
+                st.subheader(f"Editing: {selected_song['title']}")
+
+                col1, col2 = st.columns(2)
+                new_status = col1.selectbox("Status",
+                                        ["idea", "demo", "mixing", "mastered", "released"],
+                                        index=["idea", "demo", "mixing", "mastered", "released"].index(selected_song['status']) if selected_song['status'] in ["idea", "demo", "mixing", "mastered", "released"] else 0)
+
+                st.markdown("### 📝 Registration Info")
+                c1, c2 = st.columns(2)
+                isrc = c1.text_input("ISRC", value=current_reg.get('isrc', '') or '')
+                iswc = c2.text_input("ISWC", value=current_reg.get('iswc', '') or '')
+
+                st.markdown("### 🚀 Deployment Strategy")
+                # Use default=[] to pre-fill the boxes with saved data
+                dists = st.multiselect("Distribution", ["DistroKid", "TuneCore", "CD Baby", "Amuse", "AWAL", "Ditto"],
+                                     default=current_deps.get('distribution', []))
+
+                syncs = st.multiselect("Sync Libraries", ["Songtradr", "Music Gateway", "Pond5", "Disco", "Taxi", "Musicbed", "Artlist"],
+                                     default=current_deps.get('sync_libraries', []))
+
+                streams = st.multiselect("Live On", ["Spotify", "Apple Music", "Amazon", "YouTube", "Tidal", "Deezer", "Pandora"],
+                                       default=current_deps.get('streaming', []))
+
+                save_changes = st.form_submit_button("💾 Save Changes")
+
+                if save_changes:
+                    # Construct the update packet
+                    updates = {
+                        "status": new_status,
+                        "registration": {
+                            "isrc": isrc,
+                            "iswc": iswc
+                        },
+                        "deployments": {
+                            "distribution": dists,
+                            "sync_libraries": syncs,
+                            "streaming": streams
+                        }
                     }
-                }
-                manager.update_song(song_id, updates)
-                st.success(f"✅ Updated '{selected_title}' successfully!")
-                st.rerun()
+
+                    # 1. Write to Disk
+                    success = manager.update_song(song_id, updates)
+
+                    if success:
+                        st.success(f"✅ Saved changes to {selected_song['title']}!")
+
+                        # 2. WAIT for file system (The Magic Fix)
+                        import time
+                        time.sleep(0.5)
+
+                        # 3. Reload Page
+                        st.rerun()
+                    else:
+                        st.error("❌ Error saving to file. Check terminal for details.")
+
+# --- VIEW DEPLOYMENTS PAGE ---
+elif page == "View Deployments":
+    st.header("🚀 Deployment Overview")
+    st.caption("See where your songs are distributed and streaming")
+
+    songs = manager.catalog['songs']
+
+    # Publisher mapping (legal entities)
+    PUBLISHER_MAP = {
+        "FROZEN_CLOUD": "Frozen Cloud Music",
+        "PARK_BELLEVUE": "Park Bellevue Collective",
+        "BAJAN_SUN": "Bajan Sun Publishing"
+    }
+
+    # All platform options
+    ALL_DISTRIBUTORS = ["DistroKid", "TuneCore", "CD Baby", "Amuse", "AWAL", "Ditto"]
+    ALL_SYNC_LIBS = ["Songtradr", "Music Gateway", "Pond5", "Disco", "Taxi", "Musicbed", "Artlist"]
+    ALL_STREAMING = ["Spotify", "Apple Music", "Amazon", "YouTube", "Tidal", "Deezer", "Pandora"]
+    ALL_PLATFORMS = ALL_DISTRIBUTORS + ALL_SYNC_LIBS + ALL_STREAMING
+
+    # Get unique publishers from catalog
+    ALL_PUBLISHERS = sorted(set(PUBLISHER_MAP.get(s.get('act_id', ''), 'Unknown') for s in songs))
+
+    # Filters Row 1: Publisher
+    selected_publishers = st.multiselect(
+        "Filter by Publisher",
+        ALL_PUBLISHERS,
+        help="Select one or more publishers to filter songs"
+    )
+
+    # Filters Row 2: Platform and Match Mode
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        selected_platforms = st.multiselect(
+            "Filter by Platform",
+            ALL_PLATFORMS,
+            help="Select one or more platforms to filter songs"
+        )
+    with col2:
+        match_mode = st.radio("Match Mode", ["Any (OR)", "All (AND)"], horizontal=True)
+
+    # Apply publisher filter first
+    if selected_publishers:
+        filtered_songs = [s for s in songs if PUBLISHER_MAP.get(s.get('act_id', ''), 'Unknown') in selected_publishers]
+    else:
+        filtered_songs = songs
+
+    # Apply platform filters
+    if selected_platforms:
+        platform_filtered = []
+        for s in filtered_songs:
+            deps = s.get('deployments', {})
+            song_platforms = (
+                deps.get('distribution', []) +
+                deps.get('sync_libraries', []) +
+                deps.get('streaming', [])
+            )
+
+            if match_mode == "Any (OR)":
+                # Song has at least ONE of the selected platforms
+                if any(p in song_platforms for p in selected_platforms):
+                    platform_filtered.append(s)
+            else:
+                # Song has ALL of the selected platforms
+                if all(p in song_platforms for p in selected_platforms):
+                    platform_filtered.append(s)
+        filtered_songs = platform_filtered
+
+    st.write(f"**Showing {len(filtered_songs)} of {len(songs)} songs**")
+
+    # Build the table with emoji indicators
+    if filtered_songs:
+        table_data = []
+        song_id_map = {}  # Map row index to song data for jump-to-edit
+        for idx, s in enumerate(filtered_songs):
+            deps = s.get('deployments', {})
+            dist_list = deps.get('distribution', [])
+            sync_list = deps.get('sync_libraries', [])
+            stream_list = deps.get('streaming', [])
+
+            # Format with checkmarks for selected platforms
+            def format_platforms(platforms, all_options):
+                if not platforms:
+                    return "-"
+                result = []
+                for p in platforms:
+                    if selected_platforms and p in selected_platforms:
+                        result.append(f"✅ {p}")
+                    else:
+                        result.append(p)
+                return ", ".join(result)
+
+            # Get publisher from mapping
+            act_id = s.get('act_id', '')
+            publisher = PUBLISHER_MAP.get(act_id, 'Unknown')
+            artist = s.get('artist', act_id.replace('_', ' ').title())
+
+            table_data.append({
+                "Title": s['title'],
+                "Artist": artist,
+                "Publisher": publisher,
+                "Status": s.get('status', '-').title(),
+                "Distributors": format_platforms(dist_list, ALL_DISTRIBUTORS),
+                "Sync Libraries": format_platforms(sync_list, ALL_SYNC_LIBS),
+                "Streaming": format_platforms(stream_list, ALL_STREAMING)
+            })
+
+            # Store mapping for jump-to-edit
+            song_id_map[idx] = {
+                'title': s['title'],
+                'artist': artist,
+                'song_id': s['song_id']
+            }
+
+        # Display table with row selection
+        df = pd.DataFrame(table_data)
+        selection = st.dataframe(
+            df,
+            use_container_width=True,
+            height=500,
+            on_select="rerun",
+            selection_mode="single-row"
+        )
+
+        # Jump to Edit button if a row is selected
+        if selection and selection.selection and selection.selection.rows:
+            selected_row_idx = selection.selection.rows[0]
+            if selected_row_idx in song_id_map:
+                selected_info = song_id_map[selected_row_idx]
+                # Build the smart key to match Edit Song dropdown format
+                smart_key = f"{selected_info['title']} | {selected_info['artist']}"
+
+                st.markdown("---")
+                col1, col2 = st.columns([1, 4])
+                with col1:
+                    if st.button(f"✏️ Edit '{selected_info['title']}'", type="primary"):
+                        # Pre-select the song in Edit Song page
+                        st.session_state.last_selected_song_id = selected_info['song_id']
+                        st.session_state.nav_page = "Edit Song"
+                        st.rerun()
+                with col2:
+                    st.caption(f"Selected: **{smart_key}**")
+
+        # Summary stats
+        st.markdown("---")
+        st.subheader("📊 Platform Summary")
+
+        # Count songs per platform
+        platform_counts = {}
+        for s in songs:
+            deps = s.get('deployments', {})
+            all_plats = deps.get('distribution', []) + deps.get('sync_libraries', []) + deps.get('streaming', [])
+            for p in all_plats:
+                platform_counts[p] = platform_counts.get(p, 0) + 1
+
+        if platform_counts:
+            # Display in columns
+            col1, col2, col3 = st.columns(3)
+
+            with col1:
+                st.markdown("**📦 Distribution**")
+                for p in ALL_DISTRIBUTORS:
+                    count = platform_counts.get(p, 0)
+                    if count > 0:
+                        st.write(f"✅ {p}: {count} songs")
+                    else:
+                        st.write(f"⬜ {p}: 0 songs")
+
+            with col2:
+                st.markdown("**🎬 Sync Libraries**")
+                for p in ALL_SYNC_LIBS:
+                    count = platform_counts.get(p, 0)
+                    if count > 0:
+                        st.write(f"✅ {p}: {count} songs")
+                    else:
+                        st.write(f"⬜ {p}: 0 songs")
+
+            with col3:
+                st.markdown("**🎧 Streaming**")
+                for p in ALL_STREAMING:
+                    count = platform_counts.get(p, 0)
+                    if count > 0:
+                        st.write(f"✅ {p}: {count} songs")
+                    else:
+                        st.write(f"⬜ {p}: 0 songs")
+    else:
+        st.info("No songs match the selected platforms.")
 
 elif page == "Financials":
     st.header("💰 CFO Module")
