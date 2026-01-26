@@ -34,17 +34,17 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "copyright",
+      "status": "released",
       "dates": {
         "created": "2002-05-01",
         "demo_completed": "2002-05-01",
         "mastered": "2002-05-01",
         "released": "2002-05-01",
-        "last_modified": "2026-01-24T19:32:43.818631"
+        "last_modified": "2026-01-25T12:08:58.530651"
       },
       "registration": {
-        "isrc": null,
-        "iswc": null,
+        "isrc": "test",
+        "iswc": "test",
         "pro_work_id": null,
         "copyright_reg": "PAu002937600",
         "registered_with": [
@@ -116,7 +116,16 @@
         "pitch_deck_ready": true
       },
       "copyright_number": "PAu002937600",
-      "artist": "Frozen Cloud"
+      "artist": "Frozen Cloud",
+      "deployments": {
+        "distribution": [
+          "CD Baby"
+        ],
+        "sync_libraries": [],
+        "streaming": [
+          "Apple Music"
+        ]
+      }
     },
     {
       "song_id": "RS-2002-0002",
@@ -7706,17 +7715,33 @@
           "percentage": 50
         }
       ],
-      "status": "demo",
+      "status": "released",
       "legacy_code": "CRZY",
       "revenue": {
         "expenses": [],
         "total_earned": 0
       },
       "dates": {
-        "created": "2026-01-25"
+        "created": "2026-01-25",
+        "last_modified": "2026-01-25T12:34:02.252635"
       },
       "is_cover": true,
-      "cover_of": "Crazy"
+      "cover_of": "Crazy",
+      "registration": {
+        "isrc": "",
+        "iswc": ""
+      },
+      "deployments": {
+        "distribution": [
+          "TuneCore"
+        ],
+        "sync_libraries": [
+          "Pond5"
+        ],
+        "streaming": [
+          "Tidal"
+        ]
+      }
     }
   ]
 }

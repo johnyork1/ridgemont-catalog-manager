@@ -1,497 +1,6 @@
 {
   "songs": [
     {
-      "song_id": "RS-2026-0001",
-      "title": "Midnight Rain",
-      "alt_titles": [
-        "Midnight Showers"
-      ],
-      "act_id": "FROZEN_CLOUD",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 50,
-          "role": "composer_lyricist"
-        },
-        {
-          "writer_id": "W-0002",
-          "percentage": 50,
-          "role": "composer_lyricist"
-        }
-      ],
-      "musical_info": {
-        "genre": "Pop",
-        "subgenre": "Synth Pop",
-        "bpm": 118,
-        "key": "C minor",
-        "time_signature": "4/4",
-        "duration_seconds": 214,
-        "instrumental": false
-      },
-      "sync_metadata": {
-        "moods": [
-          "upbeat",
-          "driving"
-        ],
-        "themes": [
-          "heartbreak",
-          "longing",
-          "rain"
-        ],
-        "keywords": [
-          "synth",
-          "80s inspired",
-          "night",
-          "urban"
-        ],
-        "similar_artists": [
-          "The 1975",
-          "FINNEAS",
-          "HONNE"
-        ],
-        "use_cases": [
-          "TV drama",
-          "film",
-          "indie commercial"
-        ],
-        "explicit": false,
-        "one_stop": true
-      },
-      "status": "mastered",
-      "dates": {
-        "created": "2026-01-10",
-        "demo_completed": "2026-01-12",
-        "mastered": "2026-01-20",
-        "released": null,
-        "last_modified": "2026-01-24T10:30:00Z"
-      },
-      "registration": {
-        "isrc": null,
-        "iswc": null,
-        "pro_work_id": null,
-        "registered_with": []
-      },
-      "rights": {
-        "master_owner": "Ridgemont Studio",
-        "publisher": "Frozen Cloud Music",
-        "territories": [
-          "Worldwide"
-        ],
-        "restrictions": []
-      },
-      "revenue": {
-        "sync_placements": [],
-        "streaming": {},
-        "total_earned": 0
-      },
-      "links": {
-        "suno_link": "https://suno.com/song/abc123",
-        "demo_file": "/Acts/FROZEN_CLOUD/Songs/RS-2026-0001/demo.mp3",
-        "master_file": "/Acts/FROZEN_CLOUD/Songs/RS-2026-0001/master.wav"
-      },
-      "events": [
-        {
-          "timestamp": "2026-01-10T09:00:00Z",
-          "event_type": "created",
-          "description": "Song created with initial metadata",
-          "user": "John York"
-        },
-        {
-          "timestamp": "2026-01-20T16:00:00Z",
-          "event_type": "status_change",
-          "description": "Status changed from 'mixing' to 'mastered'",
-          "user": "John York"
-        }
-      ],
-      "notes": "Strong sync potential for moody TV scenes",
-      "sync_checklist": {
-        "master_cleared": true,
-        "publishing_cleared": true,
-        "one_stop_available": true,
-        "stems_available": true,
-        "instrumental_available": true,
-        "sync_rep_assigned": null,
-        "pitch_deck_ready": true,
-        "sync_status": "available"
-      }
-    },
-    {
-      "song_id": "RS-2026-0002",
-      "title": "Golden Hour",
-      "alt_titles": [],
-      "act_id": "BAJAN_SUN",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 100,
-          "role": "composer_lyricist"
-        }
-      ],
-      "musical_info": {
-        "genre": "R&B",
-        "subgenre": "Neo Soul",
-        "bpm": 85,
-        "key": "D\u266d major",
-        "time_signature": "4/4",
-        "duration_seconds": 245,
-        "instrumental": false
-      },
-      "sync_metadata": {
-        "moods": [
-          "melancholic",
-          "romantic"
-        ],
-        "themes": [
-          "love",
-          "sunset",
-          "contentment"
-        ],
-        "keywords": [
-          "soul",
-          "smooth",
-          "golden",
-          "warm"
-        ],
-        "similar_artists": [
-          "Daniel Caesar",
-          "H.E.R.",
-          "SZA"
-        ],
-        "use_cases": [
-          "romantic comedy",
-          "lifestyle commercial",
-          "wedding"
-        ],
-        "explicit": false,
-        "one_stop": true
-      },
-      "status": "released",
-      "dates": {
-        "created": "2025-11-01",
-        "demo_completed": "2025-11-05",
-        "mastered": "2025-12-01",
-        "released": "2026-01-15",
-        "last_modified": "2026-01-24T19:31:57.629399"
-      },
-      "registration": {
-        "isrc": "USRC12600001",
-        "iswc": "T-123456789-0",
-        "pro_work_id": "ASCAP-789456",
-        "registered_with": [
-          "ASCAP",
-          "SoundExchange"
-        ]
-      },
-      "rights": {
-        "master_owner": "Ridgemont Studio",
-        "publisher": "Bajan Sun Publishing",
-        "territories": [
-          "Worldwide"
-        ],
-        "restrictions": []
-      },
-      "revenue": {
-        "sync_placements": [
-          {
-            "placement_id": "SYNC-001",
-            "type": "commercial",
-            "title": "Summer Fragrance Ad",
-            "client": "Luxe Perfumes",
-            "fee": 5000,
-            "date": "2026-01-20",
-            "territory": "North America",
-            "notes": "30-second spot, Q1 campaign"
-          },
-          {
-            "placement_id": "SYNC-20260124193157",
-            "type": "TV Series",
-            "title": "Stranger Things S5E3",
-            "client": "Netflix",
-            "fee": 15000.0,
-            "territory": "Worldwide",
-            "date": "2026-03-15",
-            "notes": "End credits placement",
-            "created": "2026-01-24T19:31:57.629384"
-          }
-        ],
-        "streaming": {
-          "spotify_uri": "spotify:track:xyz789",
-          "total_streams": 15420,
-          "last_updated": "2026-01-24"
-        },
-        "total_earned": 20150.0,
-        "sync_income": 15000.0,
-        "expenses": [
-          {
-            "expense_id": "EXP-20260125023543",
-            "date": "2026-01-25",
-            "category": "Mixing",
-            "amount": 250.0,
-            "notes": ""
-          }
-        ]
-      },
-      "links": {
-        "suno_link": null,
-        "demo_file": "/Acts/BAJAN_SUN/Songs/RS-2026-0002/demo.mp3",
-        "master_file": "/Acts/BAJAN_SUN/Songs/RS-2026-0002/master.wav"
-      },
-      "events": [
-        {
-          "timestamp": "2025-11-01T10:00:00Z",
-          "event_type": "created",
-          "description": "Song created",
-          "user": "John York"
-        },
-        {
-          "timestamp": "2026-01-15T12:00:00Z",
-          "event_type": "release",
-          "description": "Released on all platforms via DistroKid",
-          "user": "John York"
-        },
-        {
-          "timestamp": "2026-01-20T09:00:00Z",
-          "event_type": "placement",
-          "description": "Sync placement: Luxe Perfumes commercial ($5,000)",
-          "user": "John York"
-        },
-        {
-          "timestamp": "2026-01-24T19:31:57.629393",
-          "event_type": "placement",
-          "description": "Sync placement: Stranger Things S5E3 (Netflix) - $15,000.00 [TV Series]",
-          "user": "John York"
-        }
-      ],
-      "notes": "First sync placement! Great response from supervisors.",
-      "sync_checklist": {
-        "sync_status": "available",
-        "master_cleared": true,
-        "publishing_cleared": true,
-        "one_stop_available": true,
-        "stems_available": false,
-        "instrumental_available": false,
-        "sync_rep_assigned": null,
-        "pitch_deck_ready": false
-      }
-    },
-    {
-      "song_id": "RS-2025-0015",
-      "title": "Echoes in the Valley",
-      "alt_titles": [
-        "Valley Echoes"
-      ],
-      "act_id": "PARK_BELLEVUE",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 50,
-          "role": "composer_lyricist"
-        },
-        {
-          "writer_id": "W-0003",
-          "percentage": 50,
-          "role": "composer_lyricist"
-        }
-      ],
-      "musical_info": {
-        "genre": "Rock",
-        "subgenre": "Indie Rock",
-        "bpm": 128,
-        "key": "E minor",
-        "time_signature": "4/4",
-        "duration_seconds": 198,
-        "instrumental": false
-      },
-      "sync_metadata": {
-        "moods": [
-          "epic",
-          "cinematic"
-        ],
-        "themes": [
-          "journey",
-          "perseverance",
-          "nature"
-        ],
-        "keywords": [
-          "guitars",
-          "build",
-          "epic",
-          "outdoor"
-        ],
-        "similar_artists": [
-          "Imagine Dragons",
-          "The Killers",
-          "Coldplay"
-        ],
-        "use_cases": [
-          "sports promo",
-          "adventure documentary",
-          "car commercial"
-        ],
-        "explicit": false,
-        "one_stop": true
-      },
-      "status": "demo",
-      "dates": {
-        "created": "2025-09-15",
-        "demo_completed": "2025-09-20",
-        "mastered": null,
-        "released": null,
-        "last_modified": "2025-10-01T08:00:00Z"
-      },
-      "registration": {
-        "isrc": null,
-        "iswc": null,
-        "pro_work_id": null,
-        "registered_with": []
-      },
-      "rights": {
-        "master_owner": "Ridgemont Studio",
-        "publisher": "Park Bellevue Collective",
-        "territories": [
-          "Worldwide"
-        ],
-        "restrictions": []
-      },
-      "revenue": {
-        "sync_placements": [],
-        "streaming": {},
-        "total_earned": 0
-      },
-      "links": {
-        "suno_link": "https://suno.com/song/def456",
-        "demo_file": "/Acts/PARK_BELLEVUE/Songs/RS-2025-0015/demo.mp3"
-      },
-      "events": [
-        {
-          "timestamp": "2025-09-15T11:00:00Z",
-          "event_type": "created",
-          "description": "Song created during writing session with Ron",
-          "user": "John York"
-        },
-        {
-          "timestamp": "2025-09-20T15:00:00Z",
-          "event_type": "status_change",
-          "description": "Demo completed",
-          "user": "John York"
-        }
-      ],
-      "notes": "Strong potential - needs full production. Ron loves this one.",
-      "sync_checklist": {
-        "master_cleared": true,
-        "publishing_cleared": true,
-        "one_stop_available": true,
-        "stems_available": true,
-        "instrumental_available": false,
-        "sync_rep_assigned": null,
-        "pitch_deck_ready": true,
-        "sync_status": "available"
-      }
-    },
-    {
-      "song_id": "RS-2026-0003",
-      "title": "Dreams and Seasons",
-      "alt_titles": [],
-      "act_id": "BAJAN_SUN",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 100,
-          "role": "composer"
-        }
-      ],
-      "musical_info": {
-        "genre": "Classical",
-        "subgenre": "Film Score",
-        "bpm": 70,
-        "key": "Various",
-        "time_signature": "4/4",
-        "duration_seconds": 180,
-        "instrumental": true
-      },
-      "sync_metadata": {
-        "moods": [
-          "chill",
-          "ambient"
-        ],
-        "themes": [
-          "journey",
-          "life",
-          "seasons",
-          "emotion"
-        ],
-        "keywords": [
-          "orchestral",
-          "piano",
-          "strings",
-          "cinematic",
-          "Thomas Newman"
-        ],
-        "similar_artists": [
-          "Thomas Newman",
-          "Max Richter",
-          "Hans Zimmer"
-        ],
-        "use_cases": [
-          "film score",
-          "documentary",
-          "trailer",
-          "TV drama"
-        ],
-        "explicit": false,
-        "one_stop": true
-      },
-      "status": "demo",
-      "dates": {
-        "created": "2026-01-24",
-        "demo_completed": null,
-        "mastered": null,
-        "released": null,
-        "last_modified": "2026-01-24T05:00:00Z"
-      },
-      "registration": {
-        "isrc": null,
-        "iswc": null,
-        "pro_work_id": null,
-        "registered_with": []
-      },
-      "rights": {
-        "master_owner": "Ridgemont Studio",
-        "publisher": "Bajan Sun Publishing",
-        "territories": [
-          "Worldwide"
-        ],
-        "restrictions": []
-      },
-      "revenue": {
-        "sync_placements": [],
-        "streaming": {},
-        "total_earned": 0
-      },
-      "links": {
-        "suno_link": "https://suno.com/song/ghi789"
-      },
-      "events": [
-        {
-          "timestamp": "2026-01-24T05:00:00Z",
-          "event_type": "created",
-          "description": "Cinematic score piece created via Suno",
-          "user": "John York"
-        }
-      ],
-      "notes": "Cinematic orchestral piece with dynamic shifts. Solo piano, cello, viola, full orchestra crescendos.",
-      "sync_checklist": {
-        "master_cleared": true,
-        "publishing_cleared": true,
-        "one_stop_available": true,
-        "stems_available": false,
-        "instrumental_available": true,
-        "sync_rep_assigned": null,
-        "pitch_deck_ready": false,
-        "sync_status": "available"
-      }
-    },
-    {
       "song_id": "RS-2002-0001",
       "title": "Down The Road",
       "alt_titles": [],
@@ -531,11 +40,11 @@
         "demo_completed": "2002-05-01",
         "mastered": "2002-05-01",
         "released": "2002-05-01",
-        "last_modified": "2026-01-24T19:32:43.818631"
+        "last_modified": "2026-01-25T11:58:09.506292"
       },
       "registration": {
-        "isrc": null,
-        "iswc": null,
+        "isrc": "test",
+        "iswc": "test",
         "pro_work_id": null,
         "copyright_reg": "PAu002937600",
         "registered_with": [
@@ -565,22 +74,8 @@
         ]
       },
       "revenue": {
-        "sync_placements": [
-          {
-            "placement_id": "SYNC-20260124193243",
-            "type": "Commercial",
-            "title": "Nike Running Ad",
-            "client": "Nike",
-            "fee": 20000.0,
-            "territory": "Worldwide",
-            "date": "2026-02-01",
-            "notes": "30-second spot",
-            "created": "2026-01-24T19:32:43.813742"
-          }
-        ],
-        "streaming": {},
-        "total_earned": 20000.0,
-        "sync_income": 20000.0
+        "expenses": [],
+        "total_earned": 0
       },
       "links": {},
       "events": [
@@ -619,6 +114,17 @@
         "instrumental_available": true,
         "sync_rep_assigned": null,
         "pitch_deck_ready": true
+      },
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud",
+      "deployments": {
+        "distribution": [
+          "TuneCore"
+        ],
+        "sync_libraries": [],
+        "streaming": [
+          "Spotify"
+        ]
       }
     },
     {
@@ -655,7 +161,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2002-06-01",
         "demo_completed": "2002-06-01",
@@ -681,8 +187,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -704,7 +209,9 @@
         "sync_rep_assigned": null,
         "pitch_deck_ready": false,
         "sync_status": "available"
-      }
+      },
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2002-0003",
@@ -740,7 +247,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2002-08-01",
         "demo_completed": "2002-08-01",
@@ -766,8 +273,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -789,7 +295,9 @@
         "sync_rep_assigned": null,
         "pitch_deck_ready": true,
         "sync_status": "available"
-      }
+      },
+      "copyright_number": "PAu002691767",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0001",
@@ -830,7 +338,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-03-01",
         "demo_completed": "2003-03-01",
@@ -856,8 +364,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -879,7 +386,9 @@
         "sync_rep_assigned": null,
         "pitch_deck_ready": false,
         "sync_status": "available"
-      }
+      },
+      "copyright_number": "PAu002776143",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0002",
@@ -920,7 +429,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -946,8 +455,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -969,7 +477,9 @@
         "sync_rep_assigned": null,
         "pitch_deck_ready": true,
         "sync_status": "available"
-      }
+      },
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0003",
@@ -1010,7 +520,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1036,8 +546,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1059,7 +568,9 @@
         "sync_rep_assigned": null,
         "pitch_deck_ready": false,
         "sync_status": "available"
-      }
+      },
+      "copyright_number": "PAu002776107",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0004",
@@ -1100,7 +611,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1126,8 +637,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1149,7 +659,9 @@
         "sync_rep_assigned": null,
         "pitch_deck_ready": true,
         "sync_status": "available"
-      }
+      },
+      "copyright_number": "PAu002774262",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0005",
@@ -1190,7 +702,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1216,8 +728,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1239,7 +750,9 @@
         "sync_rep_assigned": null,
         "pitch_deck_ready": false,
         "sync_status": "available"
-      }
+      },
+      "copyright_number": "PAu002776142",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0006",
@@ -1280,7 +793,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1306,8 +819,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1329,7 +841,9 @@
         "sync_rep_assigned": null,
         "pitch_deck_ready": true,
         "sync_status": "available"
-      }
+      },
+      "copyright_number": "PAu002775349",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0007",
@@ -1370,7 +884,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1396,8 +910,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1419,7 +932,9 @@
         "sync_rep_assigned": null,
         "pitch_deck_ready": false,
         "sync_status": "available"
-      }
+      },
+      "copyright_number": "PAu002786851",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0008",
@@ -1460,7 +975,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1486,8 +1001,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1509,7 +1023,9 @@
         "sync_rep_assigned": null,
         "pitch_deck_ready": true,
         "sync_status": "available"
-      }
+      },
+      "copyright_number": "PAu002774468",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0009",
@@ -1547,7 +1063,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1573,8 +1089,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1586,7 +1101,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002775407",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0010",
@@ -1624,7 +1141,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1650,8 +1167,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1663,7 +1179,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002775405",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0011",
@@ -1701,7 +1219,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1727,8 +1245,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1740,7 +1257,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002777162",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0012",
@@ -1778,7 +1297,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1804,8 +1323,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1817,7 +1335,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002788342",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0013",
@@ -1855,7 +1375,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1881,8 +1401,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1894,7 +1413,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002775351",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0014",
@@ -1932,7 +1453,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -1958,8 +1479,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -1971,7 +1491,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PA0001235115",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0015",
@@ -2009,7 +1531,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -2035,8 +1557,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2048,7 +1569,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002775350",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0016",
@@ -2086,7 +1609,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -2112,8 +1635,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2125,7 +1647,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002783871",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0017",
@@ -2163,7 +1687,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -2189,8 +1713,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2202,7 +1725,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002779776",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0018",
@@ -2240,7 +1765,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-05-01",
         "demo_completed": "2003-05-01",
@@ -2266,8 +1791,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2279,7 +1803,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002788342",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0019",
@@ -2317,7 +1843,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-05-01",
         "demo_completed": "2003-05-01",
@@ -2343,8 +1869,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2356,7 +1881,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002773872",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0020",
@@ -2394,7 +1921,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-05-01",
         "demo_completed": "2003-05-01",
@@ -2420,8 +1947,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2433,7 +1959,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PA0001235115",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0021",
@@ -2466,7 +1994,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-05-01",
         "demo_completed": "2003-05-01",
@@ -2492,8 +2020,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2505,7 +2032,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PA0001235115",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0022",
@@ -2543,7 +2072,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-06-01",
         "demo_completed": "2003-06-01",
@@ -2569,8 +2098,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2582,7 +2110,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PA0001235115",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0023",
@@ -2620,7 +2150,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-06-01",
         "demo_completed": "2003-06-01",
@@ -2646,8 +2176,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2659,7 +2188,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PA0001235115",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0024",
@@ -2697,7 +2228,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-06-01",
         "demo_completed": "2003-06-01",
@@ -2723,8 +2254,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2736,7 +2266,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PA0001235115",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0025",
@@ -2774,7 +2306,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-06-01",
         "demo_completed": "2003-06-01",
@@ -2800,8 +2332,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2813,7 +2344,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PA0001235115",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0026",
@@ -2851,7 +2384,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-08-01",
         "demo_completed": "2003-08-01",
@@ -2877,8 +2410,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2890,7 +2422,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PA0001235115",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0027",
@@ -2928,7 +2462,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-10-01",
         "demo_completed": "2003-10-01",
@@ -2954,8 +2488,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -2967,7 +2500,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0028",
@@ -3005,7 +2540,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-10-01",
         "demo_completed": "2003-10-01",
@@ -3031,8 +2566,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3044,7 +2578,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0029",
@@ -3082,7 +2618,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-10-01",
         "demo_completed": "2003-10-01",
@@ -3108,8 +2644,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3121,7 +2656,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0030",
@@ -3159,7 +2696,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-11-01",
         "demo_completed": "2003-11-01",
@@ -3185,8 +2722,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3198,7 +2734,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0031",
@@ -3236,7 +2774,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-11-01",
         "demo_completed": "2003-11-01",
@@ -3262,8 +2800,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3275,7 +2812,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0032",
@@ -3308,7 +2847,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-11-01",
         "demo_completed": "2003-11-01",
@@ -3334,8 +2873,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3347,7 +2885,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2004-0001",
@@ -3380,7 +2920,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2004-03-01",
         "demo_completed": "2004-03-01",
@@ -3406,8 +2946,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3419,7 +2958,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2004-0002",
@@ -3457,7 +2998,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2004-03-01",
         "demo_completed": "2004-03-01",
@@ -3483,8 +3024,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3496,7 +3036,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2004-0003",
@@ -3529,7 +3071,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2004-09-01",
         "demo_completed": "2004-09-01",
@@ -3555,8 +3097,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3568,7 +3109,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002976896",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2004-0004",
@@ -3630,8 +3173,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3643,7 +3185,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2004-0005",
@@ -3676,7 +3219,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2004-11-01",
         "demo_completed": "2004-11-01",
@@ -3702,8 +3245,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3715,7 +3257,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002980879",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2005-0001",
@@ -3777,8 +3321,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3790,7 +3333,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2005-0002",
@@ -3857,8 +3401,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3870,7 +3413,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2006-0001",
@@ -3927,8 +3471,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -3940,7 +3483,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2007-0001",
@@ -3973,7 +3517,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2007-02-01",
         "demo_completed": "2007-02-01",
@@ -3999,8 +3543,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4012,7 +3555,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu003104216",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2009-0001",
@@ -4069,8 +3614,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4082,7 +3626,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0001",
@@ -4144,8 +3689,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4157,7 +3701,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0002",
@@ -4219,8 +3764,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4232,7 +3776,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0003",
@@ -4294,8 +3839,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4307,7 +3851,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0004",
@@ -4369,8 +3914,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4382,7 +3926,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0005",
@@ -4444,8 +3989,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4457,7 +4001,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0006",
@@ -4519,8 +4064,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4532,7 +4076,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0007",
@@ -4594,8 +4139,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4607,7 +4151,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0008",
@@ -4669,8 +4214,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4682,7 +4226,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0009",
@@ -4744,8 +4289,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4757,7 +4301,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0010",
@@ -4819,8 +4364,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4832,7 +4376,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0011",
@@ -4894,8 +4439,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4907,7 +4451,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0012",
@@ -4969,8 +4514,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -4982,7 +4526,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0013",
@@ -5044,8 +4589,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5057,7 +4601,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0014",
@@ -5119,8 +4664,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5132,7 +4676,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2011-0015",
@@ -5194,8 +4739,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5207,7 +4751,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2012-0001",
@@ -5269,8 +4814,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5282,7 +4826,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2012-0002",
@@ -5344,8 +4889,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5357,7 +4901,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2012-0003",
@@ -5419,8 +4964,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5432,7 +4976,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2012-0004",
@@ -5494,8 +5039,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5507,7 +5051,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2012-0005",
@@ -5569,8 +5114,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5582,7 +5126,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2012-0006",
@@ -5644,8 +5189,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5657,7 +5201,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2012-0007",
@@ -5719,8 +5264,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5732,7 +5276,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2012-0008",
@@ -5794,8 +5339,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5807,7 +5351,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2012-0009",
@@ -5869,8 +5414,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5882,7 +5426,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2012-0010",
@@ -5944,8 +5489,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -5957,7 +5501,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2013-0001",
@@ -6019,8 +5564,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6032,7 +5576,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2020-0001",
@@ -6089,8 +5634,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6102,7 +5646,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0033",
@@ -6140,7 +5685,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -6166,8 +5711,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6179,7 +5723,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0034",
@@ -6217,7 +5763,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -6243,8 +5789,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6256,7 +5801,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0035",
@@ -6294,7 +5841,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-04-01",
         "demo_completed": "2003-04-01",
@@ -6320,8 +5867,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6333,7 +5879,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0004",
@@ -6371,7 +5919,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2026-01-24",
         "demo_completed": "2026-01-24",
@@ -6397,8 +5945,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6410,7 +5957,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0036",
@@ -6448,7 +5997,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-12-01",
         "demo_completed": "2003-12-01",
@@ -6474,8 +6023,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6487,7 +6035,9 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2003-0037",
@@ -6525,7 +6075,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "released",
+      "status": "copyright",
       "dates": {
         "created": "2003-11-01",
         "demo_completed": "2003-11-01",
@@ -6551,8 +6101,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6564,18 +6113,19 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0005",
       "title": "Simple Dream",
       "alt_titles": [],
-      "act_id": "FROZEN_CLOUD",
+      "act_id": "BAJAN_SUN",
       "writers": [
         {
           "writer_id": "W-0001",
-          "percentage": 100,
-          "role": "composer_lyricist"
+          "percentage": 100
         }
       ],
       "legacy_code": "SMPL",
@@ -6621,8 +6171,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6634,18 +6183,18 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Bajan Sun"
     },
     {
       "song_id": "RS-2026-0006",
       "title": "So Brightly",
       "alt_titles": [],
-      "act_id": "FROZEN_CLOUD",
+      "act_id": "BAJAN_SUN",
       "writers": [
         {
           "writer_id": "W-0001",
-          "percentage": 100,
-          "role": "composer_lyricist"
+          "percentage": 100
         }
       ],
       "legacy_code": "SBRT",
@@ -6691,8 +6240,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6704,18 +6252,18 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Bajan Sun"
     },
     {
       "song_id": "RS-2026-0007",
       "title": "Spiral Away",
       "alt_titles": [],
-      "act_id": "FROZEN_CLOUD",
+      "act_id": "BAJAN_SUN",
       "writers": [
         {
           "writer_id": "W-0001",
-          "percentage": 100,
-          "role": "composer_lyricist"
+          "percentage": 100
         }
       ],
       "legacy_code": "SPRA",
@@ -6761,8 +6309,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6774,7 +6321,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Bajan Sun"
     },
     {
       "song_id": "RS-2026-0008",
@@ -6812,7 +6360,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "demo",
+      "status": "idea",
       "dates": {
         "created": "2026-01-24",
         "demo_completed": "2026-01-24",
@@ -6836,8 +6384,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6849,7 +6396,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Park Bellevue"
     },
     {
       "song_id": "RS-2026-0009",
@@ -6887,7 +6435,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "demo",
+      "status": "idea",
       "dates": {
         "created": "2026-01-24",
         "demo_completed": "2026-01-24",
@@ -6911,8 +6459,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6924,7 +6471,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Park Bellevue"
     },
     {
       "song_id": "RS-2026-0010",
@@ -6962,7 +6510,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "demo",
+      "status": "idea",
       "dates": {
         "created": "2026-01-24",
         "demo_completed": "2026-01-24",
@@ -6986,8 +6534,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -6999,7 +6546,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Park Bellevue"
     },
     {
       "song_id": "RS-2026-0011",
@@ -7037,7 +6585,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "demo",
+      "status": "idea",
       "dates": {
         "created": "2026-01-24",
         "demo_completed": "2026-01-24",
@@ -7061,8 +6609,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -7074,7 +6621,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Park Bellevue"
     },
     {
       "song_id": "RS-2026-0012",
@@ -7112,7 +6660,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "demo",
+      "status": "idea",
       "dates": {
         "created": "2026-01-24",
         "demo_completed": "2026-01-24",
@@ -7136,8 +6684,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -7149,11 +6696,12 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Park Bellevue"
     },
     {
       "song_id": "RS-2026-0013",
-      "title": "Pool Party",
+      "title": "Too Late",
       "alt_titles": [],
       "act_id": "PARK_BELLEVUE",
       "writers": [
@@ -7211,8 +6759,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -7224,18 +6771,18 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Park Bellevue"
     },
     {
       "song_id": "RS-2026-0014",
       "title": "Stop And Think",
       "alt_titles": [],
-      "act_id": "FROZEN_CLOUD",
+      "act_id": "BAJAN_SUN",
       "writers": [
         {
           "writer_id": "W-0001",
-          "percentage": 100,
-          "role": "composer_lyricist"
+          "percentage": 100
         }
       ],
       "legacy_code": "STTH",
@@ -7281,8 +6828,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -7294,18 +6840,18 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "artist": "Bajan Sun"
     },
     {
       "song_id": "RS-2026-0015",
       "title": "Trouble Bad",
       "alt_titles": [],
-      "act_id": "FROZEN_CLOUD",
+      "act_id": "BAJAN_SUN",
       "writers": [
         {
           "writer_id": "W-0001",
-          "percentage": 100,
-          "role": "composer_lyricist"
+          "percentage": 100
         }
       ],
       "legacy_code": "TRBD",
@@ -7351,8 +6897,7 @@
         "restrictions": []
       },
       "revenue": {
-        "sync_placements": [],
-        "streaming": {},
+        "expenses": [],
         "total_earned": 0
       },
       "links": {},
@@ -7364,223 +6909,8 @@
           "user": "System Import"
         }
       ],
-      "notes": ""
-    },
-    {
-      "song_id": "RS-2026-0016",
-      "title": "Sunset Memories",
-      "alt_titles": [],
-      "act_id": "BAJAN_SUN",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 100,
-          "role": "composer_lyricist"
-        }
-      ],
-      "musical_info": {
-        "genre": "R&B",
-        "subgenre": "Neo Soul",
-        "bpm": 90
-      },
-      "sync_metadata": {
-        "moods": [
-          "warm",
-          "nostalgic"
-        ],
-        "themes": [
-          "reflection"
-        ]
-      },
-      "status": "demo",
-      "dates": {
-        "created": "2026-01-24",
-        "last_modified": "2026-01-24T19:01:05.861273",
-        "demo_completed": "2026-01-24"
-      },
-      "registration": {},
-      "rights": {
-        "master_owner": "Ridgemont Studio",
-        "publisher": "Bajan Sun Publishing",
-        "territories": [
-          "Worldwide"
-        ],
-        "restrictions": []
-      },
-      "revenue": {
-        "sync_placements": [],
-        "streaming": {},
-        "total_earned": 0
-      },
-      "links": {},
-      "events": [
-        {
-          "timestamp": "2026-01-24T19:00:56.985135",
-          "event_type": "created",
-          "description": "Song created with status 'idea'",
-          "user": "John York"
-        },
-        {
-          "timestamp": "2026-01-24T19:01:05.861277",
-          "event_type": "status_change",
-          "description": "Status changed from 'idea' to 'demo'",
-          "user": "John York"
-        }
-      ],
-      "notes": ""
-    },
-    {
-      "song_id": "RS-2026-0017",
-      "title": "Steel Horizon",
-      "act_id": "BAJAN_SUN",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 100,
-          "role": "composer_lyricist"
-        }
-      ],
-      "status": "demo",
-      "musical_info": {
-        "genre": "Pop",
-        "bpm": null,
-        "key": null
-      },
-      "sync_metadata": {
-        "moods": [],
-        "one_stop": true,
-        "explicit": false
-      },
-      "sync_checklist": {
-        "sync_status": "available"
-      },
-      "dates": {
-        "created": "2026-01-25"
-      },
-      "revenue": {
-        "sync_placements": [],
-        "total_earned": 0
-      },
-      "events": [
-        {
-          "timestamp": "2026-01-25T01:26:32.773296",
-          "event_type": "created"
-        }
-      ]
-    },
-    {
-      "song_id": "RS-2026-0018",
-      "title": "Velocity",
-      "act_id": "FROZEN_CLOUD",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 50,
-          "role": "composer_lyricist"
-        },
-        {
-          "writer_id": "W-0002",
-          "percentage": 50,
-          "role": "composer_lyricist"
-        }
-      ],
-      "status": "demo",
-      "musical_info": {},
-      "sync_metadata": {
-        "one_stop": true
-      },
-      "sync_checklist": {
-        "sync_status": "available"
-      },
-      "dates": {
-        "created": "2026-01-25"
-      },
-      "revenue": {
-        "sync_placements": [],
-        "total_earned": 0
-      },
-      "events": [
-        {
-          "timestamp": "2026-01-25T02:16:52.867876",
-          "event_type": "created"
-        }
-      ]
-    },
-    {
-      "song_id": "RS-2026-0019",
-      "title": "V5 Speed Test",
-      "act_id": "FROZEN_CLOUD",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 50,
-          "role": "composer_lyricist"
-        },
-        {
-          "writer_id": "W-0002",
-          "percentage": 50,
-          "role": "composer_lyricist"
-        }
-      ],
-      "status": "idea",
-      "musical_info": {},
-      "sync_metadata": {
-        "one_stop": true
-      },
-      "sync_checklist": {
-        "sync_status": "available"
-      },
-      "dates": {
-        "created": "2026-01-25"
-      },
-      "revenue": {
-        "sync_placements": [],
-        "total_earned": 0,
-        "expenses": [
-          {
-            "expense_id": "EXP-20260125030404",
-            "date": "2026-01-25",
-            "category": "Mixing",
-            "amount": 200.0,
-            "notes": ""
-          }
-        ]
-      },
-      "events": [
-        {
-          "timestamp": "2026-01-25T02:21:34.062915",
-          "event_type": "created"
-        }
-      ]
-    },
-    {
-      "song_id": "RS-2026-0020",
-      "title": "Victory Lap",
-      "act_id": "FROZEN_CLOUD",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 50
-        },
-        {
-          "writer_id": "W-0002",
-          "percentage": 50
-        }
-      ],
-      "status": "idea",
-      "revenue": {
-        "expenses": [
-          {
-            "date": "2026-01-25",
-            "amount": 50.0,
-            "category": "Registration"
-          }
-        ],
-        "total_earned": 0
-      },
-      "dates": {
-        "created": "2026-01-25"
-      }
+      "notes": "",
+      "artist": "Bajan Sun"
     },
     {
       "song_id": "RS-2026-0021",
@@ -7604,27 +6934,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
-    },
-    {
-      "song_id": "RS-2026-0022",
-      "title": "Island Breeze",
-      "act_id": "BAJAN_SUN",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 100
-        }
-      ],
-      "status": "demo",
-      "legacy_code": "ISLB",
-      "revenue": {
-        "expenses": [],
-        "total_earned": 0
       },
-      "dates": {
-        "created": "2026-01-25"
-      }
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0101",
@@ -7640,7 +6951,7 @@
           "percentage": 50
         }
       ],
-      "status": "demo",
+      "status": "copyright",
       "legacy_code": "ALTT",
       "revenue": {
         "expenses": [],
@@ -7648,7 +6959,9 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "copyright_number": "PAu002776138",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0102",
@@ -7664,7 +6977,7 @@
           "percentage": 50
         }
       ],
-      "status": "demo",
+      "status": "copyright",
       "legacy_code": "TTGD",
       "revenue": {
         "expenses": [],
@@ -7672,7 +6985,9 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "copyright_number": "PA0001235115",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0103",
@@ -7696,7 +7011,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0104",
@@ -7712,7 +7028,7 @@
           "percentage": 50
         }
       ],
-      "status": "demo",
+      "status": "copyright",
       "legacy_code": "HKOY",
       "revenue": {
         "expenses": [],
@@ -7720,7 +7036,9 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0105",
@@ -7736,7 +7054,7 @@
           "percentage": 50
         }
       ],
-      "status": "demo",
+      "status": "copyright",
       "legacy_code": "2FAR",
       "revenue": {
         "expenses": [],
@@ -7744,7 +7062,9 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0106",
@@ -7760,7 +7080,7 @@
           "percentage": 50
         }
       ],
-      "status": "demo",
+      "status": "copyright",
       "legacy_code": "TTTM",
       "revenue": {
         "expenses": [],
@@ -7768,7 +7088,9 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "copyright_number": "PAu002976650",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0107",
@@ -7792,7 +7114,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0108",
@@ -7816,7 +7139,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0109",
@@ -7840,7 +7164,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0110",
@@ -7864,7 +7189,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0111",
@@ -7888,7 +7214,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0112",
@@ -7912,7 +7239,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0113",
@@ -7936,7 +7264,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0114",
@@ -7960,7 +7289,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0115",
@@ -7984,7 +7314,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0116",
@@ -8008,7 +7339,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0117",
@@ -8032,7 +7364,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0118",
@@ -8056,7 +7389,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0119",
@@ -8080,7 +7414,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0120",
@@ -8104,7 +7439,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0121",
@@ -8128,7 +7464,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0122",
@@ -8152,7 +7489,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0123",
@@ -8176,7 +7514,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0124",
@@ -8192,7 +7531,7 @@
           "percentage": 50
         }
       ],
-      "status": "demo",
+      "status": "copyright",
       "legacy_code": "WNDR",
       "revenue": {
         "expenses": [],
@@ -8200,7 +7539,9 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "copyright_number": "PAu002937600",
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0125",
@@ -8224,7 +7565,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Frozen Cloud"
     },
     {
       "song_id": "RS-2026-0126",
@@ -8244,7 +7586,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Bajan Sun"
     },
     {
       "song_id": "RS-2026-0127",
@@ -8264,31 +7607,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
-    },
-    {
-      "song_id": "RS-2026-0128",
-      "title": "Too Late",
-      "act_id": "PARK_BELLEVUE",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 50
-        },
-        {
-          "writer_id": "W-0003",
-          "percentage": 50
-        }
-      ],
-      "status": "demo",
-      "legacy_code": "TLTE",
-      "revenue": {
-        "expenses": [],
-        "total_earned": 0
       },
-      "dates": {
-        "created": "2026-01-25"
-      }
+      "artist": "Bajan Sun"
     },
     {
       "song_id": "RS-2026-0129",
@@ -8308,7 +7628,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Bajan Sun"
     },
     {
       "song_id": "RS-2026-0130",
@@ -8328,7 +7649,8 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Bajan Sun"
     },
     {
       "song_id": "RS-2026-0131",
@@ -8348,7 +7670,62 @@
       },
       "dates": {
         "created": "2026-01-25"
-      }
+      },
+      "artist": "Bajan Sun"
+    },
+    {
+      "song_id": "RS-2026-0045",
+      "title": "Crazy",
+      "artist": "Honest Mile",
+      "act_id": "FROZEN_CLOUD",
+      "writers": [
+        {
+          "writer_id": "W-0001",
+          "percentage": 50
+        },
+        {
+          "writer_id": "W-0002",
+          "percentage": 50
+        }
+      ],
+      "status": "demo",
+      "legacy_code": "CRZY",
+      "revenue": {
+        "expenses": [],
+        "total_earned": 0
+      },
+      "dates": {
+        "created": "2026-01-25"
+      },
+      "is_cover": true,
+      "cover_of": "Crazy"
+    },
+    {
+      "song_id": "RS-2026-0046",
+      "title": "Crazy",
+      "artist": "Echoes of Jahara",
+      "act_id": "FROZEN_CLOUD",
+      "writers": [
+        {
+          "writer_id": "W-0001",
+          "percentage": 50
+        },
+        {
+          "writer_id": "W-0002",
+          "percentage": 50
+        }
+      ],
+      "status": "demo",
+      "legacy_code": "CRZY",
+      "revenue": {
+        "expenses": [],
+        "total_earned": 0
+      },
+      "dates": {
+        "created": "2026-01-25"
+      },
+      "is_cover": true,
+      "cover_of": "Crazy"
     }
   ]
 }

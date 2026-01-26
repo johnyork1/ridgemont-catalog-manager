@@ -34,17 +34,17 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "copyright",
+      "status": "released",
       "dates": {
         "created": "2002-05-01",
         "demo_completed": "2002-05-01",
         "mastered": "2002-05-01",
         "released": "2002-05-01",
-        "last_modified": "2026-01-24T19:32:43.818631"
+        "last_modified": "2026-01-25T11:59:52.852201"
       },
       "registration": {
-        "isrc": null,
-        "iswc": null,
+        "isrc": "test",
+        "iswc": "test",
         "pro_work_id": null,
         "copyright_reg": "PAu002937600",
         "registered_with": [
@@ -116,7 +116,16 @@
         "pitch_deck_ready": true
       },
       "copyright_number": "PAu002937600",
-      "artist": "Frozen Cloud"
+      "artist": "Frozen Cloud",
+      "deployments": {
+        "distribution": [
+          "TuneCore"
+        ],
+        "sync_libraries": [],
+        "streaming": [
+          "Spotify"
+        ]
+      }
     },
     {
       "song_id": "RS-2002-0002",
@@ -6351,7 +6360,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "demo",
+      "status": "idea",
       "dates": {
         "created": "2026-01-24",
         "demo_completed": "2026-01-24",
@@ -6426,7 +6435,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "demo",
+      "status": "idea",
       "dates": {
         "created": "2026-01-24",
         "demo_completed": "2026-01-24",
@@ -6501,7 +6510,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "demo",
+      "status": "idea",
       "dates": {
         "created": "2026-01-24",
         "demo_completed": "2026-01-24",
@@ -6576,7 +6585,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "demo",
+      "status": "idea",
       "dates": {
         "created": "2026-01-24",
         "demo_completed": "2026-01-24",
@@ -6651,7 +6660,7 @@
         "explicit": false,
         "one_stop": true
       },
-      "status": "demo",
+      "status": "idea",
       "dates": {
         "created": "2026-01-24",
         "demo_completed": "2026-01-24",
@@ -6692,7 +6701,7 @@
     },
     {
       "song_id": "RS-2026-0013",
-      "title": "Pool Party",
+      "title": "Too Late",
       "alt_titles": [],
       "act_id": "PARK_BELLEVUE",
       "writers": [
@@ -7600,31 +7609,6 @@
         "created": "2026-01-25"
       },
       "artist": "Bajan Sun"
-    },
-    {
-      "song_id": "RS-2026-0128",
-      "title": "Too Late",
-      "act_id": "PARK_BELLEVUE",
-      "writers": [
-        {
-          "writer_id": "W-0001",
-          "percentage": 50
-        },
-        {
-          "writer_id": "W-0003",
-          "percentage": 50
-        }
-      ],
-      "status": "demo",
-      "legacy_code": "TLTE",
-      "revenue": {
-        "expenses": [],
-        "total_earned": 0
-      },
-      "dates": {
-        "created": "2026-01-25"
-      },
-      "artist": "Park Bellevue"
     },
     {
       "song_id": "RS-2026-0129",
