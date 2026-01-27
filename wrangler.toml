@@ -1,0 +1,10 @@
+name = "ridgemont-auth"
+main = "worker.js"
+compatibility_date = "2026-01-27"
+
+[[r2_buckets]]
+binding = "MUSIC_BUCKET"
+bucket_name = "ridgemont-studio"
+
+[vars]
+FIREBASE_PROJECT_ID = "ridgemont-studio"

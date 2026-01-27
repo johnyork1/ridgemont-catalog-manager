@@ -19,7 +19,7 @@ if 'nav_page' not in st.session_state:
     st.session_state.nav_page = "Dashboard"
 
 # Get the list of pages
-NAV_PAGES = ["Dashboard", "All Songs", "Add Song", "Edit Song", "View Deployments", "Financials", "Pitching"]
+NAV_PAGES = ["Dashboard", "All Songs", "Albums", "Add Song", "Edit Song", "View Deployments", "Financials", "Pitching"]
 
 # Find index of current page
 nav_index = NAV_PAGES.index(st.session_state.nav_page) if st.session_state.nav_page in NAV_PAGES else 0
@@ -150,6 +150,105 @@ elif page == "All Songs":
     with tab_bs:
         bs_songs = [s for s in filtered if s.get('act_id') == 'BAJAN_SUN']
         render_song_table(bs_songs, "No Bajan Sun Publishing songs match filters")
+
+elif page == "Albums":
+    st.header("💿 Albums")
+
+    albums = manager.catalog.get('albums', [])
+
+    if not albums:
+        st.info("No albums in catalog yet.")
+    else:
+        for album in albums:
+            with st.expander(f"**{album['title']}** — {album['artist']}", expanded=True):
+                col1, col2 = st.columns([2, 1])
+
+                with col1:
+                    st.markdown(f"**Artist:** {album['artist']}")
+                    st.markdown(f"**Status:** {album.get('status', 'Unknown').replace('_', ' ').title()}")
+                    if album.get('release_date'):
+                        st.markdown(f"**Release Date:** {album['release_date']}")
+                    if album.get('notes'):
+                        st.markdown(f"**Notes:** {album['notes']}")
+
+                with col2:
+                    st.markdown(f"**Album ID:** `{album['album_id']}`")
+                    st.markdown(f"**Act:** {album.get('act_id', 'Unknown').replace('_', ' ').title()}")
+
+                # Track listing
+                tracks = album.get('tracks', [])
+                if tracks:
+                    st.markdown("---")
+                    st.markdown("**Track Listing:**")
+                    track_data = []
+                    for t in tracks:
+                        # Look up song details
+                        song = next((s for s in manager.catalog['songs'] if s['song_id'] == t['song_id']), None)
+                        status = song.get('status', '-') if song else '-'
+                        track_data.append({
+                            "#": t['track_number'],
+                            "Title": t['title'],
+                            "Song ID": t['song_id'],
+                            "Status": status.title()
+                        })
+                    st.dataframe(pd.DataFrame(track_data), use_container_width=True, hide_index=True)
+                else:
+                    st.caption("No tracks added yet.")
+
+    # Add New Album section
+    st.markdown("---")
+    st.subheader("➕ Add New Album")
+
+    # Get unique artists
+    existing_artists = sorted(set(s.get('artist', '') for s in manager.catalog['songs'] if s.get('artist')))
+
+    with st.form("new_album_form"):
+        album_title = st.text_input("Album Title")
+        album_artist = st.text_input("Artist", placeholder="e.g., Stone Meridian")
+        if existing_artists:
+            st.caption(f"Existing artists: {', '.join(existing_artists)}")
+
+        # Act selection
+        ACT_MAP = {
+            "Frozen Cloud Music": "FROZEN_CLOUD",
+            "Park Bellevue Collective": "PARK_BELLEVUE",
+            "Bajan Sun Publishing": "BAJAN_SUN",
+            "Stone Meridian": "STONE_MERIDIAN"
+        }
+        act_label = st.selectbox("Publishing Act", list(ACT_MAP.keys()))
+
+        album_status = st.selectbox("Status", ["in_progress", "mixing", "mastered", "released"])
+        album_notes = st.text_area("Notes", placeholder="Optional notes about the album...")
+
+        submitted = st.form_submit_button("Create Album")
+
+        if submitted:
+            if not album_title:
+                st.error("❌ Please enter an album title")
+            elif not album_artist:
+                st.error("❌ Please enter an artist name")
+            else:
+                from datetime import datetime
+                new_album = {
+                    "album_id": f"ALB-{str(len(albums) + 1).zfill(4)}",
+                    "title": album_title,
+                    "artist": album_artist,
+                    "act_id": ACT_MAP[act_label],
+                    "release_date": None,
+                    "status": album_status,
+                    "tracks": [],
+                    "artwork": None,
+                    "notes": album_notes,
+                    "created": datetime.now().isoformat(),
+                    "last_modified": datetime.now().isoformat()
+                }
+
+                if 'albums' not in manager.catalog:
+                    manager.catalog['albums'] = []
+                manager.catalog['albums'].append(new_album)
+                manager.save_catalog()
+                st.success(f"✅ Created album '{album_title}' by {album_artist}")
+                st.rerun()
 
 elif page == "Add Song":
     st.header("New Song Entry")
